@@ -1,0 +1,24 @@
+Terdapat 3 jenis cara berkomunikasi
+yaitu simplex yang berarti komunikasi satu arah, 
+half-duplex, komunikasi dua arah tetapi disaat dia menerima hanya bisa menerima tidak bisa mengirim, dan full- duplex yaitu komunikasi dua arah yang bisa menerima dan mengirim sekaligus
+Komunikasi SPI (Serial Peripheral Interface)
+Ada 2 komponen yaitu Master dan Slave
+pada SPI, Microcontroller berperan sebagaiaster sedangkan Sensor berperan pada Slave. SPI memiliki 4 pin, dimana pada pin terakhir terdapat SS sehingga dapat memungkinkan lebih dari 1 Slave. Terdapat banyak kelebihan SPI, salah satunya yaitu komunikasi full duplex sehingga kecepatan transfer data lebih tinggi dari I2C
+Komunikasi I2C
+Pada jenis ini, juga terdapat Master dan Slave. Slave yang dipunya juga dapat lebih dari satu. Perbedaan dengan SPI adalah komunikasi I2C hanya memiliki 2 pin.Selain itu, I2C juga mengirimkan data dengan bit star dan stop yang disebut message. Di dalam message terdapat Adress Frame yang berisi alamat dari slave yang mana. Selain itu juga ada Data Fram yang bisa lebih dari 1. Akhir dari message ini adalah bit stop. 
+
+Komunikasi UART (Universal Asynchronus Reception and Transmission)
+UART sering dipakai pada mikon arduino. Pada komunikasi ini terdapat 2 pin, yaitu pin RX dan TX. Komunikasi ini  termasuk jenis half dan atau full-duplex. Cara kerjanya yaitu jika device 1 dengan pin RX mengirim pesan, maka akan diterima ke Device 2 pin TX, begitu juga sebaliknya. Kelebihan UART yaitu pada saat interaksi, tidak ada clock yang menyinkronkan 2 perangkat. Kekurangan UART adalah ukuran data frame tidak boleh lebih dari 9 bit, dan tidak bisa memiliki banyak slave seperti komunikasi lainnya. 
+
+Komunikasi CAN-Bus (Controller Area Network Bus)
+Komunikasi ini sering dipakai pada bidang otomotif. Mikrokontroler dan perangkat pada CAN-Bus dapat berkomunikasi tanpa adanya jaringan komputer Pada CAN-Bus hanya beroperasi secara half-duplex, sehingga komunikasi nya tidak bisa sekaligus. 
+
+Komunikasi I2S (Inter-IC Sound Bus)
+Komunikasi ini biasanya digunakan pada transmisi data audio. Jika sebelumnya menggunakan pin, pada I2S menggunakan kabel, tepatnya 3 kabel. I2S juga memiliki 3 sinyal utama, Serial Clock SCLK, Frame Clock LRCK, dan Data Serial SDATA. Untuk lebih menyinkronkan sistem, diperlukan sinyal tambahan yaitu MCLK. 
+
+Komunikasi GPIO (General Purpose Input Output) 
+yaitu bua expander yang meyederhanakan perluasan port I/O
+GPIO sering digunakan ketika mikon tidak memiliki cukup port atau perlu kontrol serial jarak jauh. Keuntungan GPIO yaitu konsumsi daya rendah, dapat bekerja pada kecepatan penuh, dan banyak lagi. 
+
+Komunikasi SDIO
+Ini merupakan ekspansi tipe SD. SDIO dapat disambungkan ke kartu SD, juga ke perangkat yang mendukung SDIO. Protokol SDIO dikembangkan dari protokol kartu SD. Aplikasi target dari SDIO adalah mendukung kemampuan I/O kecepatan rendah dengan perangkat keras yang dikeluarkan dapat minimal
